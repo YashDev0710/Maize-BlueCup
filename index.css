@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+body {
+  color: #1a1a1a;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+.padding-section100{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.designer-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align content to the right */
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  position: relative; /* For absolute positioning of content */
+}
+
+.designer-img {
+  height: 100vh; /* Full viewport height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the available space */
+  position: absolute; /* Allows it to stretch across the right */
+  right: 0; /* Position at the far right */
+  top: 0; /* Align to the top */
+  z-index: -1; /* Place it behind content */
+}
+
+.content {
+  position: absolute;
+  left: 50px; /* Position content from the left */
+  top: 50px; /* Position content from the top */
+  z-index: 1; /* Above the background */
+}
+
+.svg1 {
+  margin-top: 12rem;
+  margin-left: 7rem;
+  margin-bottom: 20px; /* Space between logo and buttons */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.rounded-button {
+
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-white {
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+}
+
+.btn-white:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-blue {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-blue:hover {
+  background-color: #0056b3;
+}
+.header1{
+    text-align: center;
+}
+.cursor-name{
+    padding-left: 7.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .designer-container {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center the content */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+    background-image: url('assets/Designer.png'); /* Use image as background */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add padding */
+  }
+
+  .designer-img {
+    display: none; /* Hide the separate image */
+  }
+
+  .content {
+    position: relative; /* Reset positioning */
+    top: auto;
+    left: auto;
+    z-index: 10; /* Ensure it's above the background */
+  }
+
+  .button-container {
+    margin-top: 20px; /* Space below logo */
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .rounded-button {
+    width: 80%; /* Make buttons wider on small screens */
+    margin: 10px 0; /* Space around buttons */
+  }
+  .svg1{
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .designer-container {
+    padding: 10px; /* Less padding for smaller devices */
+  }
+
+  .button-container {
+    gap: 5px; /* Reduce spacing between buttons */
+  }
+
+  .rounded-button {
+    width: 90%; /* Even wider buttons */
+    
+  }
+  .svg1{
+    align-items: center;
+    justify-content: center;
+  }
+  .cursor-name{
+    padding-left: 0;
+
+  }
+}
