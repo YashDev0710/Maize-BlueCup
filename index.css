@@ -87,7 +87,348 @@ body {
 .cursor-name{
     padding-left: 7.5rem;
 }
+.blue-box {
+  position: relative;
+    border: 2px solid #007bff; /* Blue border */
+    padding: 20px;
+    border-radius: 8px; /* Optional: For rounded corners */
+    text-align: center; /* Center text inside */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+.content-section {
+    background-color: #f8f9fa; /* Light background for the section */
+    padding: 80px 0; /* Space around the section */
+}
 
+.left-content, .right-content {
+    background-color: #fff; /* Optional: White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+.left-content h2, .right-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.left-content p, .right-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.lightblue-section {
+    background-color: #d1ecf1; /* Light blue background */
+    padding: 100px 0; /* Space around the section */
+}
+
+.section-title {
+    font-size: 48px; /* Large font size for the title */
+    font-weight: bold;
+    color: #007bff; /* Optional: Blue color for the title */
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 20px; /* Slightly smaller font for the description */
+    color: #333; /* Darker text for contrast */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Limit width for better readability on large screens */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.alternating-section {
+    padding: 80px 0; /* Space around the section */
+    background-color: #f8f9fa; /* Light background */
+}
+
+.section-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px; /* Space below heading */
+}
+
+.content {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.img-fluid {
+    border-radius: 8px; /* Optional: Rounded corners for the images */
+    max-width: 100%;
+    height: auto;
+}
+.three-circles-section {
+    padding: 80px 0; /* Add space around the section */
+    background-color: #f0f8ff; /* Optional light background color */
+}
+
+.section-heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.circle-img {
+    width: 120px; /* Adjust size for circular images */
+    height: 120px;
+    border-radius: 50%; /* Make the images circular */
+    object-fit: cover; /* Ensure images cover the circle area */
+    position: absolute; /* Position the images absolutely */
+}
+
+.left-img {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); /* Vertically center the left image */
+}
+
+.top-right-img {
+    top: 0;
+    right: 0;
+}
+
+.bottom-right-img {
+    bottom: 0;
+    right: 0;
+}
+.svg-paragraph-section {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.top-svg {
+    display: inline-block;
+    margin-bottom: 20px; /* Space between SVG and paragraph */
+}
+
+.section-paragraph {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.custom-svg {
+    margin-right: 10px; /* Space between SVG and text */
+}
+
+.custom-list li svg {
+    width: 30px;
+    height: 10px;
+}
+
+.svg-paragraph-section {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.top-svg {
+    display: inline-block;
+    margin-bottom: 20px; /* Space between SVG and paragraph */
+}
+
+.section-paragraph {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.custom-svg {
+    margin-right: 10px; /* Space between SVG and text */
+}
+
+.custom-list li svg {
+    width: 30px;
+    height: 10px;
+}
+.list-and-paragraph-section {
+    padding: 50px 0;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.styled-paragraph {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 20px;
+    border: 2px solid #007bff; /* Only a blue border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 40px 0; /* Space between the lists and the paragraph */
+    text-align: center; /* Center the text */
+}
+.pointer-box-section {
+    padding: 50px 0;
+    background-color: #f7f7f7; /* Light background */
+}
+
+.section-header {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.pointer-box-section {
+    padding: 50px 0;
+    background-color: #f7f7f7; /* Light background */
+}
+
+.section-header {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.pointer-box {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-content {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.pointer-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff; /* Blue heading */
+}
+
+.pointer-arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #007bff; /* Matches the border color */
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    right: -20px; /* Positions it on the right side */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.image-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.image-section h2 {
+  color: #222;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.image-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.next-steps-section {
+  background-color: #e6f7ff; /* Light blue background */
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Title Styles */
+.section-title {
+  color: #1a1a1a;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Step Wrapper */
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+/* Single Step */
+.step {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Arrow (Pointer) */
+.arrow {
+  font-size: 22px;
+  margin-right: 10px;
+  color: #3b79dd; /* Same as the SVG gradient arrow color */
+}
+
+/* Thank You Image Styles */
+.thank-you img {
+  width: 200px; /* Adjust width as needed */
+  max-width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+.iphone-video {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Automatic height to maintain aspect ratio */
+    max-height: 100vh; /* Max height set to full viewport height */
+    object-fit: contain; /* Ensures the video fits without cropping */
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .designer-container {
@@ -111,6 +452,9 @@ body {
     left: auto;
     z-index: 10; /* Ensure it's above the background */
   }
+  .left-content, .right-content {
+        margin-bottom: 30px; /* Add space between stacked content */
+    }
 
   .button-container {
     margin-top: 20px; /* Space below logo */
@@ -125,8 +469,66 @@ body {
     margin-left: auto;
   }
 }
+.section-title {
+        font-size: 36px; /* Slightly smaller font size for smaller screens */
+    }
 
+    .section-description {
+        font-size: 18px; /* Adjust font size for smaller devices */
+    }
+     .section-heading {
+        font-size: 30px;
+    }
+
+    .content1 {
+        font-size: 16px;
+    }
+    .circle-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .section-description {
+        font-size: 16px;
+    }
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .custom-list li {
+        font-size: 16px;
+    }
+
+    .custom-svg svg {
+        width: 24px;
+    }
+    .image-section h2 {
+    font-size: 20px;
+  }
+
+
+ .section-title {
+    font-size: 20px;
+  }
+
+  .step {
+    font-size: 16px;
+  }
+
+  .thank-you img {
+    width: 150px; /* Smaller image for smaller screens */
+  }
+.iphone-video {
+        max-height: 50vh; /* Reduce height on tablets and smaller screens */
+    }
 @media (max-width: 576px) {
+  .image-section h2 {
+    font-size: 18px;
+  }
   .designer-container {
     padding: 10px; /* Less padding for smaller devices */
   }
@@ -146,5 +548,16 @@ body {
   .cursor-name{
     padding-left: 0;
 
+  }
+ .section-title{
+    font-size: 18px;
+  }
+
+  .step {
+    font-size: 14px;
+  }
+
+  .thank-you img {
+    width: 120px; /* Even smaller for mobile devices */
   }
 }
