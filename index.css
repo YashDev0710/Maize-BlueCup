@@ -16,6 +16,10 @@ body {
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.padding-section50{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
 .designer-container {
   display: flex;
   align-items: center;
@@ -142,7 +146,7 @@ body {
     background-color: #f8f9fa; /* Light background */
 }
 
-.section-heading {
+.section-heading1 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 40px; /* Space below heading */
@@ -164,7 +168,7 @@ body {
     background-color: #f0f8ff; /* Optional light background color */
 }
 
-.section-heading {
+.section-heading2 {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -380,48 +384,90 @@ body {
 }
 
 .next-steps-section {
-  background-color: #e6f7ff; /* Light blue background */
+  background-color: #E5F1FD; /* Faint light blue background */
   padding: 50px 0;
+  position: relative; /* Needed for absolute positioning of decorative images */
   text-align: center;
 }
 
-/* Title Styles */
 .section-title {
-  color: #1a1a1a;
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-size: 2rem;
+  color: #2E3B4E;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
-/* Step Wrapper */
 .steps-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 20px;
   margin-bottom: 40px;
 }
 
-/* Single Step */
 .step {
   display: flex;
   align-items: center;
-  margin: 10px 0;
-  font-size: 18px;
 }
 
-/* Arrow (Pointer) */
 .arrow {
-  font-size: 22px;
-  margin-right: 10px;
-  color: #3b79dd; /* Same as the SVG gradient arrow color */
+  font-size: 2rem;
+  color: #3B79DD;
+  margin-right: 15px;
 }
 
-/* Thank You Image Styles */
+.step p {
+  font-size: 1.2rem;
+  color: #2E3B4E;
+  margin: 0;
+}
+
+.thank-you {
+  margin-top: 40px;
+}
+
 .thank-you img {
-  width: 200px; /* Adjust width as needed */
   max-width: 100%;
   height: auto;
-  margin-top: 40px;
+}
+
+/* Decorative Images Styling */
+.decorative-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensures the images don't interfere with content interactions */
+}
+
+.decor-image {
+  position: absolute;
+  max-width: 20rem;
+  opacity: 0.8; /* Slight transparency to make it subtle */
+}
+
+/* Image Positions */
+.decor-image-left-middle {
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.decor-image-right-middle {
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.decor-image-bottom-left {
+  left: -50px;
+  bottom: -50px;
+}
+
+.decor-image-bottom-right {
+  right: -50px;
+  bottom: -50px;
 }
 .iphone-video {
     width: 100%; /* Full width of the container */
@@ -429,6 +475,49 @@ body {
     max-height: 100vh; /* Max height set to full viewport height */
     object-fit: contain; /* Ensures the video fits without cropping */
 }
+
+.blue-pointer-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blue-pointer-box p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  max-width: 70%;
+}
+
+.blue-pointer-button {
+  background-color: #3B79DD; /* Blue color */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* The pointer (triangle) */
+.blue-pointer-button::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid #3B79DD; /* Same color as the button */
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .designer-container {
@@ -525,6 +614,21 @@ body {
 .iphone-video {
         max-height: 50vh; /* Reduce height on tablets and smaller screens */
     }
+     .steps-wrapper {
+    align-items: center;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .step p {
+    font-size: 1rem;
+  }
+
+  .decor-image {
+    max-width: 100px; /* Reduce image size on smaller screens */
+  }
 @media (max-width: 576px) {
   .image-section h2 {
     font-size: 18px;
@@ -559,5 +663,20 @@ body {
 
   .thank-you img {
     width: 120px; /* Even smaller for mobile devices */
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+
+  .step p {
+    font-size: 0.9rem;
+  }
+
+  .decor-image {
+    max-width: 80px; /* Further reduce image size on extra small screens */
   }
 }
