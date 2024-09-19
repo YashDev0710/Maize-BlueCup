@@ -20,6 +20,9 @@ body {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+.padding-section30{
+  padding-top: 2rem;
+}
 .designer-container {
   display: flex;
   align-items: center;
@@ -476,15 +479,18 @@ body {
     object-fit: contain; /* Ensures the video fits without cropping */
 }
 
+.blue-pointer-section{
+  background-color: #F2F9FF;
+}
+
 .blue-pointer-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  background-color: #F2F9FF;
+ 
 }
 
 .blue-pointer-box p {
@@ -498,22 +504,22 @@ body {
   background-color: #3B79DD; /* Blue color */
   color: #fff;
   padding: 10px 20px;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px 0 0 10px; /* Rounded left corners */
   position: relative;
   font-weight: bold;
   white-space: nowrap;
 }
 
-/* The pointer (triangle) */
+/* The pointer (triangle) on the left side */
 .blue-pointer-button::after {
   content: "";
   position: absolute;
-  right: -20px;
+  left: -20px; /* Change from right to left */
   top: 50%;
   transform: translateY(-50%);
   width: 0;
   height: 0;
-  border-left: 20px solid #3B79DD; /* Same color as the button */
+  border-right: 20px solid #3B79DD; /* Change from border-left to border-right */
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
 }
