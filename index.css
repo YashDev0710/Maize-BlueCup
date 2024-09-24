@@ -98,9 +98,9 @@ p {
 }
 
 .designer-img {
-  height: 100%; /* Full height of the container */
-  width: 50vw; /* Half the viewport width */
-  object-fit: cover; /* Cover the available space */
+  height: auto; /* Full height of the container */
+  width: 65vw; /* Half the viewport width */
+  object-fit: fill; /* Cover the available space */
   position: absolute; /* Allows it to stretch across the right */
   right: 0; /* Position at the far right */
   top: 0; /* Align to the top */
@@ -311,8 +311,9 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 .three-circles-section {
-    padding: 80px 0; 
+    padding: 80px 0 140px 0; 
     background-color: #f0f8ff; 
+
 }
 
 .section-heading2 {
@@ -327,29 +328,37 @@ p {
 }
 
 .circle-img {
-    width: 120px; /* Adjust size for circular images */
-    height: 120px;
     border-radius: 50%; /* Make the images circular */
     object-fit: cover; /* Ensure images cover the circle area */
     position: absolute; /* Position the images absolutely */
+     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Apply a dark shadow */
 }
 
+/* Left image - largest image */
 .left-img {
+    width: 10rem; /* Adjust size for circular images */
+    height: 10rem;
     top: 50%;
-    left: 0;
+    left: -5%;
     transform: translateY(100%); /* Vertically center the left image */
 }
 
+/* Top right image */
 .top-right-img {
-    top: 50;
+    width: 5rem; /* Adjust size for circular images */
+    height: 5rem;
+    top: 0;
     right: 0;
-    transform: translateY(100%);
+    transform: translateY(0); /* Keep it at the top */
 }
 
+/* Bottom right image */
 .bottom-right-img {
-    bottom: 0;
-    right: 0;
-    transform: translateY(-50%);
+    width: 8rem; /* Adjust size for circular images */
+    height: 8rem;
+    bottom: 100%;
+    right: 5%;
+    transform: translateY(80%); /* Keep it at the bottom */
 }
 .svg-paragraph-section {
     padding: 50px 0;
@@ -534,97 +543,124 @@ p {
 }
 
 .next-steps-section {
-  background-color: #E5F1FD; /* Faint light blue background */
-  padding: 50px 0;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  position: relative; /* Needed for absolute positioning of decorative images */
-  text-align: start;
+  padding: 50px 2rem; /* Section padding */
+  background-color: #E5F1FD;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the content wrapper */
 }
 
-.section-title {
-  font-size: 2rem;
+/* Content wrapper restricted to A4 dimensions */
+.a4-content {
+  background-color: #E5F1FD;
+  width: 25cm; /* A4 width */
+  max-height: auto; /* A4 height */
+  padding: 2cm; /* Padding within the content to give some spacing */
+   /* Content background for contrast */
+  box-sizing: border-box; /* Include padding within width and height */
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* Style for section titles */
+.section-title1 {
+  
+  font-size: 1.3rem;  
   color: #2E3B4E;
   margin-bottom: 30px;
-  font-weight: bold;
+  font-weight:bolder;
+  padding-top: 20px;
 }
 
+/* Wrapper for steps */
 .steps-wrapper {
-  display: block;
+  display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 20px;
- 
+  padding-bottom: 20px;
 }
 
+/* Individual step styling */
 .step {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 
-.arrow {
-  font-size: 2rem;
-  color: #3B79DD;
+.custom-svg {
   margin-right: 15px;
 }
 
 .step p {
-  font-size: 1.2rem;
+  text-align: left;
+  font-size: 1rem;
   color: #2E3B4E;
   margin: 0;
+  line-height: 1.6;
+  padding-bottom: 5px;
 }
 
+/* Thank You section with additional spacing */
 .thank-you {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: auto; /* Adjust as needed */
+  margin-top: 60px;
 }
 
+/* Adjust "Thank You" image */
 .thank-you img {
-  max-width: 500px;
+  max-width: 35rem;
   height: auto;
-  size: 50rem;
 }
+
+
+/* Style for decorative images to prevent overlap and maintain positioning */
+
+
 
 /* Decorative Images Styling */
 .decorative-images {
-  position: absolute;
+  position: absolute; /* Keeps images within the section bounds */
   top: 0;
   left: 0;
-  max-width: 100%;
-  height: 100%;
-  pointer-events: none; /* Ensures the images don't interfere with content interactions */
-  overflow: hidden;
+  width: 100%; /* Ensures it covers the full section */
+  height: 100%; /* Full height to allow images to be positioned freely */
+  pointer-events: none; /* Prevents images from interfering with content interaction */
+  overflow: hidden; /* Hides any overflowing parts of images */
+  display: flex;
+  flex-wrap: wrap; /* Allows flexibility if needed */
+  gap: 10px; /* Space between decorative images */
 }
 
+/* Individual Decorative Image Styling */
 .decor-image {
   position: absolute;
-  max-width: 35rem;
-  opacity: 0.8; /* Slight transparency to make it subtle */
+  max-width: 35rem; /* Limits the size of the images */
+  opacity: 0.8; /* Slight transparency for a subtle effect */
 }
 
-/* Image Positions */
+/* Image Specific Positions */
 .decor-image-left-middle {
-  left: -50px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: -300px;
+  top: 40%;
+  transform: translateY(-50%); /* Centers vertically */
 }
 
 .decor-image-right-middle {
-  right: -50px;
+  right: -300px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-80%); /* Centers vertically */
+  
 }
 
 .decor-image-bottom-left {
-  left: -30px;
-  bottom: -30px;
+  left: 0;
+  bottom: 0;
+  transform: translate(-250px, -20px); /* Slight offset for positioning */
 }
 
 .decor-image-bottom-right {
-  right: -50px;
-  bottom: -50px;
+  right: 0;
+  bottom: 0;
+  transform: translate(150px, 100px); /* Slight offset for positioning */
 }
 
    .video-fluid {
@@ -636,15 +672,17 @@ p {
 
 
 .blue-pointer-section{
+  display: block;
   background-color: #F2F9FF;
+  padding: 4rem 4rem 4rem 4rem ;
+  align-items: center;
 }
 
 .blue-pointer-box {
   display: flex;
-  align-items: center;
+  align-items: start;
+  padding: 4rem 4rem 4rem 4rem ;
   justify-content: space-between;
-  padding: 15px;
-  
   background-color: #F2F9FF;
  
 }
@@ -653,7 +691,7 @@ p {
   margin: 0;
   font-size: inherit;
   color: #333;
-  max-width: 50%;
+  max-width: 80%;
 }
 
 .blue-pointer-button {
@@ -682,6 +720,11 @@ p {
     border-bottom: 25px solid transparent; /* Bottom border for triangle */
     z-index: 1;
   
+}
+.last-line p{
+  text-align: center;
+  justify-content: center;
+ 
 }
 
 
@@ -712,7 +755,7 @@ p {
     background-image: url('assets/Designer.png'); /* Use image as background */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
-    padding: 20px; /* Add padding */
+    padding: 0; /* Add padding */
   }
 
   .designer-img {
@@ -724,9 +767,15 @@ p {
     top: auto;
     left: auto;
     z-index: 10; /* Ensure it's above the background */
+    display: grid;
+  place-items: center;
   }
   .left-content, .right-content {
+    display: grid;
+  place-items: center;
+    padding-left: auto;
         margin-bottom: 30px; /* Add space between stacked content */
+      justify-content: center;
     }
 
   .button-container {
@@ -756,9 +805,9 @@ p {
   .svg1{
     margin-left: auto;
   }
-}
+
 .section-title {
-        font-size: inherit; /* Slightly smaller font size for smaller screens */
+        font-size: 20px; /* Slightly smaller font size for smaller screens */
     }
 
     .section-description {
@@ -771,10 +820,7 @@ p {
     .content1 {
         font-size: 1rem;
     }
-    .circle-img {
-        width: 90px;
-        height: 90px;
-    }
+    
 
     .section-heading {
         font-size: inherit;
@@ -807,9 +853,7 @@ p {
     font-size: inherit;
   }
 
-  .thank-you img {
-    width: 150px; /* Smaller image for smaller screens */
-  }
+  
 .iphone-video {
         max-height: 50vh; /* Reduce height on tablets and smaller screens */
     }
@@ -862,8 +906,44 @@ p {
       transform: translateY(-7px); /* Reduce the bounce height for smaller screens */
     }
   }
+  .next-steps-section {
+  background-color: #E5F1FD; /* Faint light blue background */
+  padding: 50px 0;
+  
+  position: relative; /* Needed for absolute positioning of decorative images */
+  text-align: start;
+}
+.section-title {
+  font-size: 2rem;
+  color: #2E3B4E;
+  margin-bottom: 30px;
+  font-weight: bold;
+  padding: 1rem 0 0 1rem;
+}
+
+.steps-wrapper {
+  display: block;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+   padding: 1rem 0 0 1rem;
+ 
+}
+.thank-you { 
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+/* Adjust "Thank You" image */
+.thank-you img {
+  max-width: 25rem;
+  height: auto;
+}
 
 
+}
 @media (max-width: 576px) {
   .image-section h2 {
     font-size: 18px;
@@ -948,9 +1028,24 @@ p {
 .next-steps-section {
   background-color: #E5F1FD; /* Faint light blue background */
   padding: 50px 0;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  
   position: relative; /* Needed for absolute positioning of decorative images */
   text-align: start;
+}
+.section-title {
+  font-size: 2rem;
+  color: #2E3B4E;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding: 1rem 0 0 1rem;
+}
+
+.steps-wrapper {
+  display: block;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+   padding: 1rem 0 0 1rem;
+ 
 }
 }
