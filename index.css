@@ -56,6 +56,10 @@ p {
     margin-bottom: 1rem; /* Adds spacing after paragraphs */
 }
 
+.header1 h1{
+  padding-top: 30px;
+  font-size: 3rem;
+}
 
 .gradient-text {
     font-size: inherit; /* Adjust the size as needed */
@@ -172,6 +176,7 @@ p {
   display: inline-block;
 }
 .header1{
+  
     text-align: center;
 }
 .cursor-name{
@@ -218,6 +223,14 @@ p {
     bottom: -15px; /* Adjust position */
     right: -15px; /* Adjust position */
 }
+.fourcornor h3{
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.fourcornor p{
+  margin: 1rem 0 0 0;
+}
 .content-section {
     background-color: #f8f9fa; /* Light background for the section */
     padding: 80px 0; /* Space around the section */
@@ -253,9 +266,9 @@ p {
 }
 
 .section-title {
-    font-size: 1rem; /* Large font size for the title */
-    font-weight: bold;
-    color: #007bff; /* Optional: Blue color for the title */
+    font-size: 2rem; /* Large font size for the title */
+    font-weight:600;
+    color: #707070; /* Optional: Blue color for the title */
     margin-bottom: 20px;
 }
 
@@ -664,9 +677,10 @@ p {
 }
 
    .video-fluid {
-    min-height: 500px; /* Adjust as needed */
+    min-height: 250px; /* Adjust as needed */
+    height: 500px;
     display: flex;
-    align-items: stretch; /* Ensures both columns match height */
+    align-items: fill; /* Ensures both columns match height */
 }
     
 
