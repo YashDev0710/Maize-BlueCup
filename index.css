@@ -1,10 +1,9 @@
 * {
   margin: 0;
-  padding: 0;
+ 
   box-sizing: border-box;
   outline: none; /* Consider removing this */
   list-style: none;
-  /* border: 1px solid red; */ /* Remove this line */
 }
 
 body {
@@ -302,6 +301,7 @@ p {
 /* Background Image for Each Specific Row */
 .bg-image-1 {
     background-image: url('assets/bg1.png'); /* Replace with your image path */
+    
 }
 
 .bg-image-2 {
@@ -577,10 +577,10 @@ p {
 /* Style for section titles */
 .section-title1 {
   
-  font-size: 1.3rem;  
+  font-size: 1rem;  
   color: #2E3B4E;
   margin-bottom: 30px;
-  font-weight:bolder;
+  font-weight:600;
   padding-top: 20px;
 }
 
@@ -604,7 +604,7 @@ p {
 
 .step p {
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #2E3B4E;
   margin: 0;
   line-height: 1.6;
@@ -685,20 +685,26 @@ p {
     
 
 
-.blue-pointer-section{
-  display: block;
+.blue-pointer-section {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
   background-color: #F2F9FF;
-  padding: 4rem 4rem 4rem 4rem ;
-  align-items: center;
+  padding: 4rem;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensures the section takes up full viewport height */
 }
 
 .blue-pointer-box {
   display: flex;
-  align-items: start;
-  padding: 4rem 4rem 4rem 4rem ;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center; /* Centers the content horizontally */
+  padding: 4rem;
   background-color: #F2F9FF;
- 
+  width: 100%; /* Full width of the parent container */
+  max-width: 1200px; /* Optional: limit maximum width */
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 
 .blue-pointer-box p {
@@ -709,39 +715,55 @@ p {
 }
 
 .blue-pointer-button {
-    background-color: #3B79DD; /* Blue color */
-    color: #fff;
-    padding: 10px 10px;
-    border-radius: 0; /* Rounded corners, set to zero for square */
-    position: relative;
-    font-weight: bold;
-    white-space: nowrap;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #3B79DD; /* Blue color */
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 0; /* Rounded corners, set to zero for square */
+  position: relative;
+  font-weight: bold;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* The pointer (triangle) on the left side */
 .blue-pointer-button::after {
-    content: "";
-    position: absolute;
-    left: -40px; /* Adjust as needed */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0; /* Set height to 0 for the triangle */
-    border-left: 20px solid transparent; /* Transparent left border */
-    border-right: 20px solid #3B79DD; /* Visible right border */
-    border-top:25px solid transparent; /* Top border for triangle */
-    border-bottom: 25px solid transparent; /* Bottom border for triangle */
-    z-index: 1;
-  
+  content: "";
+  position: absolute;
+  left: -40px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0; /* Set height to 0 for the triangle */
+  border-left: 20px solid transparent; /* Transparent left border */
+  border-right: 20px solid #3B79DD; /* Visible right border */
+  border-top: 25px solid transparent; /* Top border for triangle */
+  border-bottom: 25px solid transparent; /* Bottom border for triangle */
+  z-index: 1;
 }
-.last-line p{
+
+.last-line p {
   text-align: center;
   justify-content: center;
- 
 }
 
+.a4-content1 {
+  background-color: #F2F9FF;
 
+  width: 33cm; /* A4 width */
+  height: auto; /* A4 height */
+  padding: 2cm; /* Padding within the content to give some spacing */
+  box-sizing: border-box; /* Include padding within width and height */
+  overflow: hidden; /* Prevents content overflow */
+  justify-self: center;
+  display: flex;
+  align-items: center; /* Center content vertically within the A4 */
+  justify-content: center; /* Center content horizontally within the A4 */
+}
+ .section-title3{
+  font: 1.2em;
+  font-weight: 600;
+  padding-left: 2rem;
+ }
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
