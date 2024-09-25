@@ -194,33 +194,33 @@ p {
     width: 1rem; /* Set a width for corner boxes */
     height: 1rem; /* Set a height for corner boxes */
     border: 2px solid #007bff; /* Blue border */
-    background-color: transparent; /* Make the box hollow */
-    color: #0056b3; /* Optional: Set text color to match the border */
+    background-color: white; /* Make the box hollow */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
-    
+
     
     line-height: 40px; /* Center text vertically */
 }
 
 .top-left {
-    top: -15px; /* Adjust position */
-    left: -15px; /* Adjust position */
+    top: -10px; /* Adjust position */
+    left: -10px; /* Adjust position */
     color: white;
+    
 }
 
 .top-right {
-    top: -15px; /* Adjust position */
-    right: -15px; /* Adjust position */
+    top: -10px; /* Adjust position */
+    right: -10px; /* Adjust position */
 }
 
 .bottom-left {
-    bottom: -15px; /* Adjust position */
-    left: -15px; /* Adjust position */
+    bottom: -10px; /* Adjust position */
+    left: -10px; /* Adjust position */
 }
 
 .bottom-right {
-    bottom: -15px; /* Adjust position */
-    right: -15px; /* Adjust position */
+    bottom: -10px; /* Adjust position */
+    right: -10px; /* Adjust position */
 }
 .fourcornor h3{
   font-size: 1rem;
