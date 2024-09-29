@@ -82,6 +82,7 @@ p {
 .padding-section100{
     padding-top: 50px;
     padding-bottom: 50px;
+    display: block;
 }
 .padding-section50{
   padding-top: 25px;
@@ -89,6 +90,7 @@ p {
 }
 .padding-section30{
   padding-top: 2rem;
+  display: none;
 }
 .designer-container {
   display: flex;
@@ -556,24 +558,31 @@ p {
 }
 
 .next-steps-section {
+  display: flex;
   padding: 50px 2rem; /* Section padding */
   background-color: #E5F1FD;
   position: relative;
-  display: flex;
-  justify-content: center; /* Center the content wrapper */
+  align-items: center; /* Vertically center the content wrapper */
+  justify-content: center; /* Horizontally center the content wrapper */
 }
 
 /* Content wrapper restricted to A4 dimensions */
 .a4-content {
+ margin: auto;
   background-color: #E5F1FD;
   width: 25cm; /* A4 width */
-  max-height: auto; /* A4 height */
   padding: 2cm; /* Padding within the content to give some spacing */
-   /* Content background for contrast */
   box-sizing: border-box; /* Include padding within width and height */
   overflow: hidden; /* Prevents content overflow */
 }
-
+.a4-content1 {
+  display: none;
+  width: 100%; /* Full width for mobile */
+  padding: 20px; /* Reduce padding for smaller screens */
+  max-height: none; /* Allow content to expand as needed on mobile */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  overflow: visible; /* Allow content to flow naturally */
+}
 /* Style for section titles */
 .section-title1 {
   
@@ -772,17 +781,29 @@ p {
     transform: translateY(-30px); /* Default bounce height */
   }
 }
+.three-circles-section3{
+  display: none;
+}
 
 /* Apply the animation to the image */
 .cursor-animate {
   animation: bounce 2s infinite; /* Adjust timing as needed */
   display: inline-block; /* Ensures the transform works correctly */
 }
+.mobile-layout-section{
+  display: blocks;
+}
+.mobile-layout-section3{
+  display: none;
+}
 
-
+/*------------------------------------------------------Tablet Responsiveness-------------------------------*/
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .body{
+    overflow: hidden;
+  }
   .designer-container {
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center the content */
@@ -808,10 +829,10 @@ p {
   }
   .left-content, .right-content {
     display: grid;
-  place-items: center;
+    place-items: center;
     padding-left: auto;
-        margin-bottom: 30px; /* Add space between stacked content */
-      justify-content: center;
+    margin-bottom: 30px; /* Add space between stacked content */
+    justify-content: center;
     }
 
   .button-container {
@@ -977,10 +998,28 @@ p {
   max-width: 25rem;
   height: auto;
 }
-
-
+.three-circles-section3{
+  display: none;
+}
+.a4-content {
+  width: 90%; /* Wider width for tablets */
+  padding: 1.75rem; /* Slightly more padding on tablets */
+  margin-left: auto; /* Center on tablet screens */
+  margin-right: auto; /* Center on tablet screens */
+}
+.mobile-layout-section{
+  display: none;
+}
+.mobile-layout-section3{
+  display: block;
+}
+/*------------------------------------------------ Mobile Layout --------------------------------------*/
 }
 @media (max-width: 576px) {
+
+  .body{
+    overflow: hidden;
+  }
   .image-section h2 {
     font-size: 18px;
   }
@@ -1013,7 +1052,7 @@ p {
   }
 
   .thank-you img {
-    width: 120px; /* Even smaller for mobile devices */
+    width: 15rem; /* Even smaller for mobile devices */
   }
   .section-title {
     font-size: 1.5rem;
@@ -1064,9 +1103,9 @@ p {
 .next-steps-section {
   background-color: #E5F1FD; /* Faint light blue background */
   padding: 50px 0;
-  
   position: relative; /* Needed for absolute positioning of decorative images */
   text-align: start;
+  overflow: hidden;
 }
 .section-title {
   font-size: 2rem;
@@ -1083,5 +1122,223 @@ p {
   gap: 20px;
    padding: 1rem 0 0 1rem;
  
+}
+.a4-content{
+  max-width: 100%;
+  align-items: start;
+  margin-left: 2px;
+  background-color: #E5F1FD;
+  width: 25cm; /* A4 width */
+  padding: 2cm; /* Padding within the content to give some spacing */
+   /* Content background for contrast */
+  box-sizing: border-box; /* Include padding within width and height */
+  overflow: hidden; /* Prevents content overflow */
+}
+.left-content, .right-content {
+  display: grid;
+  place-items: start;
+  padding-left: auto;
+  margin-bottom: 30px; /* Add space between stacked content */
+  justify-content: center;
+  }
+  .padding-section100{
+    display: none;
+  }
+  .padding-section30{
+    display: block;
+  }
+  .three-circles-section3{
+    display: block;
+  }
+  .three-circles-section{
+    display: none;
+  }
+
+  .three-circles-section3 {
+    background-color:#f0f8ff;
+    display: flex;
+    flex-direction: column; /* Stack the content and images */
+    justify-content: flex-start;
+    align-items: center; /* Center everything horizontally */
+    padding: 20px;
+    height: auto;
+}
+
+.three-circles-section3 .content {
+    text-align: left; /* Ensure text is left-aligned */
+    width: 100%; /* Full width for the content */
+}
+
+/* Images row for mobile */
+.three-circles-section3 .images-row {
+    display: flex;
+    justify-content: space-between; /* Space out the images evenly */
+    align-items: center;
+    flex-wrap: wrap; /* Allow images to wrap if the screen is too narrow */
+    width: 100%;
+    margin-top: 20px; /* Space between content and images */
+}
+
+.three-circles-section3 .circle-img {
+    width: 80px; /* Adjust image size for mobile */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%; /* Keep the images circular */
+    margin: 10px; /* Space around each image to prevent overlap */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Light shadow */
+    position: static; /* Remove absolute positioning */
+}
+.blue-pointer-section {
+  padding: 1.5rem; /* Reduced padding */
+  min-height: auto; /* No need to enforce full viewport height */
+}
+
+.a4-content1 {
+  width: 100%; /* Full width for mobile */
+  padding: 1rem; /* Reduced padding */
+}
+
+.blue-pointer-box {
+  flex-direction: row; /* Stack the content vertically */
+  padding: 1.5rem; /* Reduced padding for mobile */
+  max-width: 100%; /* Remove the 1200px max-width restriction */
+  text-align: left;
+}
+
+.blue-pointer-box p {
+  max-width: 100%; /* Full width for text */
+  font-size: 0.9rem; /* Slightly smaller text for mobile */
+}
+
+.blue-pointer-button {
+  margin-top: 1rem; /* Add spacing between button and paragraph */
+  padding: 8px 12px; /* Smaller padding for mobile */
+  font-size: 0.9rem; /* Smaller button text */
+}
+
+.blue-pointer-button::after {
+  left: -30px; /* Adjust triangle position for mobile */
+  border-left: 15px solid transparent; 
+  border-right: 15px solid #3B79DD; 
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+}
+
+.last-line p {
+  font-size: 0.9rem; /* Smaller font size */
+  padding: 0.5rem; /* Adjust padding */
+}
+
+.mobile-layout-section3 {
+  padding: 1rem;
+  background-color: #f8f9fa;
+}
+.mobile-layout-section3 p{
+font-size: 1.25rem;
+}
+.mobile-layout-section3 .gradient-text{
+  font-size: 1.25rem;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-screens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-screen {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.mobile-screen img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.description-section3 {
+  width: 100%;
+  text-align: center;
+}
+
+.description-section3 h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.description-section3 p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.custom-list {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.custom-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.custom-list li::before {
+  content: '•';
+  color: #3B79DD;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.custom-svg {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+
+.mobile-layout-section {
+  display: none;
+}
+.decor-image {
+  max-width: 15rem; /* Reduce image size for small screens */
+  opacity: 0.7; /* Slightly increase transparency */
+}
+
+.decor-image-left-middle {
+  left: -100px; /* Adjust positioning for smaller screens */
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.decor-image-right-middle {
+  right: -100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.decor-image-bottom-left {
+  left: 0;
+  bottom: 0;
+  transform: translate(-100px, -10px); /* Adjust offset for smaller screen */
+}
+
+.decor-image-bottom-right {
+  right: 0;
+  bottom: 0;
+  transform: translate(50px, 50px); /* Adjust offset for smaller screen */
 }
 }
