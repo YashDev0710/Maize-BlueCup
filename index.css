@@ -119,11 +119,11 @@ p {
   z-index: 1; /* Above the background */
 }
 
-.svg1 {
+.svglogo {
   display: grid;
-  place-items: center; /* Centers both horizontally and vertically */
+  place-items: start; /* Centers both horizontally and vertically */
   margin-top: 12rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   height: 100%; /* Ensure the div takes full height */
 }
 
@@ -863,6 +863,7 @@ p {
 
   .svg1{
     margin-left: auto;
+
   }
 
 .section-title {
